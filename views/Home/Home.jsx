@@ -1,23 +1,44 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Text, View, Button, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import style from './HomeStyles';
 
 export default class HomeScreen extends React.Component {
+  static navigationOptions = ({navigation}) => ({
+    headerRight: (
+      <TouchableOpacity style={style.icon}>
+        <Ionicons
+          onPress={() => navigation.navigate('Settings')}
+          name="settings-sharp"
+          size={22}
+          color="#fff"
+        />
+      </TouchableOpacity>
+    )
+  });
+
+  showSettings = () => {
+    this.props.navigation.navigate('Settings');
+  }
+
   render() {
     return (
-      <View style={styles.container}}>
-        <Text>Home Screen</Text>
-        <StatusBar style="auto" />
+      <View style={style.container}>
+        <ImageBackground
+          style={style.background}
+          source={require('../../assets/background-night.jpg')}
+        >
+        <StatusBar style="dark-content"/>
+        <View style={style.content}>
+          <Text>Home Screen</Text>
+          <Button
+            title="Settings"
+            onPress={this.showSettings}
+          />
+        </View>
+        </ImageBackground>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
