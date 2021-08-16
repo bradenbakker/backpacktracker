@@ -10,7 +10,8 @@ export default class SettingsScreen extends React.Component {
         <StatusBar style="dark-content"/>
         <Text>Settings Screen</Text>
         <Button
-          title="Settings"
+          title="Home"
+          color= '#228B22'
           onPress={() => this.props.navigation.navigate('Home')}
         />
       </View>

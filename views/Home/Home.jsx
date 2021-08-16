@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, Text, View, Button, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import style from './HomeStyles';
+import PackList from '../../components/PackList';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = ({navigation}) => ({
@@ -27,15 +28,11 @@ export default class HomeScreen extends React.Component {
       <View style={style.container}>
         <ImageBackground
           style={style.background}
-          source={require('../../assets/background-night.jpg')}
+          source={require('../../assets/background-boat.jpg')}
         >
         <StatusBar style="dark-content"/>
         <View style={style.content}>
-          <Text>Home Screen</Text>
-          <Button
-            title="Settings"
-            onPress={this.showSettings}
-          />
+          <PackList/>
         </View>
         </ImageBackground>
       </View>
