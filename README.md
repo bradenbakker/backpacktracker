@@ -6,7 +6,7 @@ The app is in it's early stages, but it should be able to calculate the volume, 
 It also doubles as a handy packing list and record of your stuff in case it gets lost or stolen!
 
 ## The Stack
-The app is built in React-native and is run on Expo. React-native apps are written in Javascript but are compiled to the native language of whatever device you're running it on i.e. Swift/Objective-C/Java
+The app is built in React-native and is run on Expo. React-native apps are written in Javascript but are compiled to the native language of whatever device you're running it on i.e. Swift/Objective-C/Java. I'm primarily developing & testing on Android as that is the phone I have :)
 
 ## To Set up the environment
 1. Install git if you don't already have it. 
@@ -16,9 +16,9 @@ The app is built in React-native and is run on Expo. React-native apps are writt
 5. cd into the folder and run npm install
 
 ## To test the app
-Install expo on your mobile device via your app store
-### run expo start
-Scan the barcode with expo (android only) or text/email the link to your phone
+1. Install expo on your mobile device via your app store
+2. use the command `run expo start`
+3. Scan the barcode with expo (android only) or text/email the link to your phone
 
 
 ## Current Tasks
