@@ -17,7 +17,7 @@ The app is built in React-native and is run on Expo. React-native apps are writt
 
 ## To test the app
 Install expo on your mobile device via your app store
-# run expo start
+### run expo start
 Scan the barcode with expo (android only) or text/email the link to your phone
 
 
